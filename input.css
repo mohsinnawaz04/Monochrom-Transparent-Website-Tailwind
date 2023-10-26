@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+body {
+    font-family:  'Inter var', sans-serif;
+}
+
+
+
+.icons a:hover{
+    color: rgb(118, 118, 118);
+    font-size: 3.5rem;
+    transition: all .3s;
+}
+
+#about {
+    background-color: rgb(182, 182, 182);
+    border-right: none;
+    border-left: none;
+}
+
+
+
+.footer-bg {
+    background-color: rgb(182, 182, 182);
+}
+
+@media (max-width: 576px) {
+    #hamburger {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        transition: all .25s;
+        position: absolute;
+        /* top: 4px;*/
+        right: 2.5rem; 
+        /* border: 2px solid green; */
+    }
+    .hamburger-top,
+    .hamburger-middle,
+    .hamburger-bottom  {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 2px;
+        background-color: #000;
+        transform: rotate(0);
+        transition: all .5s;
+
+    }
+
+    .hamburger-middle {
+        transform: translateY(7px);
+    }
+    .hamburger-bottom {
+        transform: translateY(14px);
+    }
+
+    .open {
+        rotate: (90deg);
+        transform: translateY(0px);
+
+    }
+    .open .hamburger-top {
+        transform: rotate(45deg) translateY(6px) translate(6px);
+    }
+    .open .hamburger-middle {
+        display: none;
+    }
+    .open .hamburger-bottom {
+        transform: rotate(-45deg) translateY(6px) translate(-6px);
+    }
+    
+
+    .menu {
+        margin-top: 2.6rem;
+    }
+}   
